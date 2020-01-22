@@ -1,7 +1,8 @@
 import { Router } from 'express';
+import BudgetController from './controllers/BudgetControllers';
 
 const routes = new Router();
 
-routes.get('/', (req, res) => res.json({ this: 'ok' }));
+routes.post('/budget', BudgetController.store);
 
 export default routes;
