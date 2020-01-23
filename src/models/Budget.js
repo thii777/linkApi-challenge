@@ -1,9 +1,13 @@
 import { Schema, model } from 'mongoose';
 
 const budgetSchema = new Schema({
-  product: String,
-  price: Number,
+  org_name: String,
+  value: Number,
   status: String,
-});
+},
+  {
+    timestamps: true,
+  }
+);
 
-export default model('budget', budgetSchema);
+export default model('Budget', budgetSchema);

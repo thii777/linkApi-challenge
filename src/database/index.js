@@ -7,7 +7,10 @@ class Database {
 
   mongo() {
     mongoose.connect(
-      'mongodb+srv://linkapi:linkapi@cluster0-3huiz.mongodb.net/challenge-linkapi?retryWrites=true&w=majority',
+      'mongodb+srv://linkapi:linkapi@cluster0-3huiz.mongodb.net/challenge-linkapi?retryWrites=true&w=majority', {
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+      }
     );
   }
 }
